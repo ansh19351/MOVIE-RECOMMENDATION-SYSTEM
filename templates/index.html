@@ -1,0 +1,49 @@
+
+<html>
+   <head>
+      <title>Movie Recommendation System</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&display=swap" rel="stylesheet">
+
+</head>
+   <body>
+       <video autoplay muted loop id="myVideo">
+         <source src="display_video.mp4" type="video/mp4">
+         Your browser does not support HTML5 video.
+       </video>
+       <div class="content">
+         <h1><b>MOVIE RECOMMENDATION SYSTEM</b></h1>
+            <form action = "http://localhost:5000/login" method = "post">
+               <ul>
+                  <li>
+                     <h2>Enter Movie Name</h2>
+                  </li>
+                  <li>
+                     <input type = "text" name = "mname"/>
+                  </li>
+                  <li>
+                     <h2>Enter number of Recommendations</h2>
+                  </li>
+                  <li>
+                     <select name="rel_movies" id="rel_movies">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                      </select>
+                  </li>
+                  <li>
+                     <br>
+                     <input type = "submit" value = "submit" />
+                  </li>
+               </ul>
+          </div>
+       </div>
+       
+   </body>
+</html>

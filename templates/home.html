@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200&display=swap" rel="stylesheet">
+    <title>Recommendations</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        .movies_content
+        {
+            text-align: center;
+        }
+        .movie_box
+        {
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+        ul
+        {
+            list-style: none;
+        }
+        a
+        {
+            text-decoration: none;
+            color: aquamarine;
+        }
+        ::-webkit-scrollbar {
+        width: 20px;
+        }
+
+        ::-webkit-scrollbar-track {
+        background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+        background-color: #d6dee1;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+        background-color: #a8bbbf;
+        }
+     </style>   
+</head>
+<body>
+    <div class="movies_content">
+        <h1>Recommendations As Per Your Query</h1>
+        <div class="movie_box">
+            {% for item in data %}
+            <div class="movie_item">
+                <ul>
+                <li><img src="{{item[4]}}" alt=""></li>
+                <li><h2>{{item[0]}}</h2></li>
+                <li><h3>Genres:</h3></li>
+                <li><h3 style="color:salmon;">{{item[2]}}</h3></li>
+                <li><h3>Average Rating:</h3></li>
+                <li><h3 style="color:yellow;">{{item[3]}}</h3></li>
+                <li><a href="{{item[5]}}">IMDB Link</a></li>
+                </ul>
+            </div>      
+            {% endfor %}
+        </div>
+    </div>
+    
+</body>
+</html>
